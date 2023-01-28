@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -9.5px;
+  left: -9px;
+  animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(3);
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+
+.intro {
+  height: 100vh;
+}
+
+.intro_2 {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+}
+
+.intro img {
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+}
+
+.intro_1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+}
+
+section {
+  height: 100vh;
+  color: black;
+}
+
+section h1 {
+  padding-top: 300px;
+  text-align: center;
+  font-size: 80px;
+}
+
+.ring_Content{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  z-index: 3;
+  bottom: 5%;
+  left: 47%;
+}
+
+.title{
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 0.9rem;
+	text-align: center;
+  color: #ffffff;
+}
+
+.Down{
+	position: relative;
+	font-weight: 300;
+	font-size: 1.6rem;
+	bottom: 15%;
+	color: #ffffff;
+  animation: rebote 2s linear infinite;
+}
+
+@keyframes rebote{
+    0%{
+        top: -5px;
+    }
+    50%{
+        top: 10px;
+    }
+    100%{
+        top: -5px;
+    }
+}
+.btn{
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  display: none;
+}
+
+.StarBtn{
+  position: relative;
+  padding: 15px 30px;
+  overflow: hidden;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  transition: 0.2s;
+}
+
+.StarBtn:hover{
+  background: #000000;
+  box-shadow: 0 0 10px #000000, 0 0 40px #000000, 0 0 80px #000000;
+  transition-delay: 1s;
+  color: rgb(255, 255, 255);
+}
+
+.StarBtn>span{
+  position: absolute;
+  display: block;
+}
+
+#span1{
+  top:0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #000000);
+}
+
+
+.StarBtn:hover #span1{
+  left: 100%;
+  transition: 1s;
+}
+
+#span3{
+  bottom:0;
+  right: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(270deg, transparent, #000000);
+}
+
+.StarBtn:hover #span3{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2{
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #000000);
+}
+
+.StarBtn:hover #span2{
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+#span4{
+  bottom: -100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #000000);
+}
+
+.StarBtn:hover #span4{
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.Video2part{
+  width: 100%;
+  height: 100vh;
+}
+
+.SegundaParte{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
